@@ -3,7 +3,41 @@
   <v-container>
     <v-card elevation="0">
       <v-row>
-        <v-col cols="6">
+        <v-col cols="7" class="d-flex justify-start align-center">
+          <section>
+            <v-card
+              class="mx-auto"
+              elevation="0"
+              tile
+            >
+              <v-card-title :class="largeFont" class="d-flex flex-column font-weight-bold">
+                <div v-if="this.$vuetify.breakpoint.mdAndUp">
+                  <div class="black--text mb-2">
+                  이제까지<br/>
+                  얼굴만 보고<br/>
+                  1:1 낯선사람과<br/>
+                  만나느라<br/>
+                  </div>
+                  <div class="white--text" style="background: #2b9bd3">
+                  부담스러우셨죠?
+                  </div>
+                </div>
+                <div v-else>
+                  <div class="black--text mb-2">
+                  이제까지<br/>
+                  얼굴만보고<br/>
+                  1:1 낯선사람과<br/>
+                  만나느라<br/>
+                  </div>
+                  <div class="white--text" style="background: #2b9bd3">
+                  부담스러우셨죠?
+                  </div>
+                </div>
+              </v-card-title>
+            </v-card>
+          </section>
+        </v-col>
+        <v-col cols="5">
           <section>
             <v-container>
               <v-row>
@@ -19,70 +53,9 @@
             </v-container>
           </section>
         </v-col>
-        <v-col cols="6" class="d-flex justify-start align-center">
-          <section>
-            <v-card
-              class="mx-auto"
-              elevation="0"
-              tile
-            >
-              <v-card-title :class="largeFont" class="d-flex flex-column font-weight-bold">
-                <div v-if="this.$vuetify.breakpoint.mdAndUp">
-                  <div class="black--text mb-2">
-                  바른연애생활은
-                  </div>
-                  <div class="light-blue--text">
-                  낯선사람의 얼굴만보고 즉석 만남을 갖을 수는 없습니다...
-                  </div>
-                </div>
-                <div v-else>
-                  <span class="black--text mb-2">
-                  바른연애생활은
-                  </span>
-                  <span class="light-blue--text">
-                  낯선사람의 얼굴만보고 즉석 만남을 갖을 수는 없습니다...
-                  </span>
-                </div>
-              </v-card-title>
-            </v-card>
-          </section>
-        </v-col>
       </v-row>
       <v-row :style="padding">
-        <v-col cols="6"  class="d-flex justify-end align-center">
-          <section>
-            <v-container>
-              <v-row>
-                <v-col cols="12">
-                  <v-card
-                    elevation="0"
-                    tile
-                  >
-                    <v-card-title :class="largeFont" class="d-flex flex-column font-weight-bold">
-                      <div v-if="this.$vuetify.breakpoint.mdAndUp">
-                        <div class="black--text mb-2">
-                        바른연애생활은
-                        </div>
-                        <div class="light-blue--text">
-                        지인과 함께 모임을 개설하고 참가자들을 모집합니다.
-                        </div>
-                      </div>
-                      <div v-else>
-                        <span class="black--text mb-2">
-                        바른연애생활은
-                        </span>
-                        <span class="light-blue--text">
-                        지인과 함께 모임을 개설하고 참가자들을 모집합니다.
-                        </span>
-                      </div>
-                    </v-card-title>
-                  </v-card>
-                </v-col>
-              </v-row>
-            </v-container>
-          </section>
-        </v-col>
-        <v-col cols="6">
+        <v-col cols="5">
           <section>
             <v-container>
               <v-row>
@@ -92,6 +65,49 @@
                     tile
                   >
                     <v-img src="/images/mascot2.png" data-aos="fade-left" />
+                  </v-card>
+                </v-col>
+              </v-row>
+            </v-container>
+          </section>
+        </v-col>
+        <v-col cols="7" class="d-flex justify-end align-center">
+          <section>
+            <v-container>
+              <v-row>
+                <v-col cols="12">
+                  <v-card
+                    elevation="0"
+                    tile
+                  >
+                    <v-card-title :class="largeFont" class="d-flex text-right flex-column font-weight-bold">
+                      <div v-if="this.$vuetify.breakpoint.mdAndUp">
+                        <div class="black--text mb-2">
+                          이제는 바른연애생활로
+                          <div class="light-blue--text">
+                          취미가 같은 사람과!<br/>
+                          지인과 함께 2:2로!<br/>
+                          </div>
+                          <div class="white--text" style="background: #2b9bd3">
+                          편안하고 안전하게
+                          </div>
+                          인연을 만나보세요.
+                        </div>
+                      </div>
+                      <div v-else>
+                        <div class="black--text mb-2">
+                          이제는 바른연애생활로
+                          <div class="light-blue--text">
+                          취미가 같은 사람과!<br/>
+                          지인과 함께 2:2로!<br/>
+                          </div>
+                          <div class="white--text" style="background: #2b9bd3">
+                          편안하고 안전하게
+                          </div>
+                          인연을 만나보세요.
+                        </div>
+                      </div>
+                    </v-card-title>
                   </v-card>
                 </v-col>
               </v-row>
@@ -133,13 +149,13 @@
                     color="transparent"
                   >
                     <v-card-title :class="largeFont" class="font-weight-black">
-                      지인과 함께 2:2 모임
+                      반드시 지인과 함께 2:2 모임
                     </v-card-title>
                     <v-card-text v-if="this.$vuetify.breakpoint.mdAndUp" :class="mediumFont" class="font-weight-bold grey--text">
-                      지인에게 숨겨가면서 낯선 사람과 1:1 로 만나는 것이 부담스러웠다면 지인과 함께 2:2 로 만나는 모임에 참가해보세요.
+                      낯선 사람과 1:1로 만나는 것이 부담스러웠다면? 지인과 함께 2:2로 모임을 즐기세요!
                     </v-card-text>
                     <v-card-text v-else :class="mediumFont" class="font-weight-bold grey--text">
-                      실제 친구를 바연생에 초대하여 안전하게 모임을 즐기세요.
+                      낯선 사람과 1:1로 만나는 것이 부담스러웠다면? 지인과 함께 2:2로 모임을 즐기세요!
                     </v-card-text>
                   </v-card>
                 </v-col>
@@ -164,13 +180,13 @@
                     tile
                   >
                     <v-card-title :class="largeFont" class="font-weight-black">
-                      외모·스펙지상주의?!
+                      외모·스펙지상주의가 지겹다면?!
                     </v-card-title>
                     <v-card-text v-if="this.$vuetify.breakpoint.mdAndUp" :class="mediumFont" class="font-weight-bold grey--text">
-                      나를 평가의 대상으로 판단하는 사람들보다 나의 생각과 관심에 공감하는 사람들과 만나보세요.
+                      나의 생각과 관심을 표현하고 서로의 진정한 내면의 가치를 들여다 보세요!
                     </v-card-text>
                     <v-card-text v-else :class="mediumFont" class="font-weight-bold grey--text">
-                      외모보다 나와 공감할 수 있는 사람들과 만나보세요.
+                      나의 생각과 관심을 표현하고 서로의 진정한 내면의 가치를 들여다 보세요!
                     </v-card-text>
                   </v-card>
                 </v-col>
@@ -232,10 +248,10 @@
                       취미를 공유하는 의미있는 만남
                     </v-card-title>
                     <v-card-text v-if="this.$vuetify.breakpoint.mdAndUp" :class="mediumFont" class="font-weight-bold grey--text">
-                      지역별, 관심사별, 또래별 모임들을 검색하고 지인과 함께 2:2 모임에 동참해 보세요.
+                      필터를 통해 지역별, 관심사별, 또래별 등 마와 맞는 모임을 검색해 참가 신청을 보내 보세요!
                     </v-card-text>
                     <v-card-text v-else :class="mediumFont" class="font-weight-bold grey--text">
-                      만나서 같이 즐기고 싶은 모임 유형을 선택하세요.
+                      필터를 통해 지역별, 관심사별, 또래별 등 마와 맞는 모임을 검색해 참가 신청을 보내 보세요!
                     </v-card-text>
                   </v-card>
                 </v-col>
